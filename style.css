@@ -11,21 +11,19 @@ body {
 h1 {
     font-family: 'Diplomata SC', cursive, sans-serif;
     color: rgb(219, 208, 183);
-    font-size: 1.9vmax;
-    line-height: 1.3;
+    /*font-size: 1.9vmax;*/
+    line-height: 1.1;
     padding: 6px 0px 0px 3px;
     font-stretch: extra-condensed;
     transform: scaleY(1.5);
     margin: 2px auto;
     font-weight: normal;
-    
-    
 }
 
 h2 {
     font-family: 'Diplomata SC', cursive, sans-serif;
     color: rgb(219, 208, 183);
-    font-size: 1vmax;
+    /*font-size: 1vmax;*/
     font-stretch: extra-condensed;
     transform: scaleY(1.5);
     padding-bottom: 2px;
@@ -33,14 +31,34 @@ h2 {
     
 }
 
+.subtitle {
+    display: inline-block;
+}
+.subtitle div {
+    display: inline-block;
+}
+.subtitle img {
+    max-height: 18px;
+    padding: 0 1px;
+}
+
+.subtitle h2 {
+    display: inline-block;
+vertical-align: 30%;
+margin: 0;
+padding: 0 2px;
+
+    
+ }
+
 .instructions {
-    font-size: 17px;
+    display: block;
     line-height: 1.2;
     color: white;
 }
 
 .container {
-    display: flex;
+   display: flex;
     max-width: 800px;
     flex-flow: row wrap;
     justify-content: center;/*refers to main axis*/
@@ -53,7 +71,6 @@ h2 {
 div.container>* {
     margin-bottom: 15px;
     margin-right: 15px;
-    
     cursor: pointer;
 }
 
@@ -67,27 +84,14 @@ position: absolute;
   backface-visibility: hidden;
   outline: 1.5px solid rgb(27, 25, 22);
     outline-offset: -1.5px;
-
-
 }
 
 .faceDown {
 background-image: url(img/backside.jpg);
-
-
-
-}
-
-.faceUp {
-    
-
 }
 
 .hidden {
     visibility:hidden;
-    
-
-
 }
 
 .flip-card {
@@ -110,8 +114,6 @@ background-image: url(img/backside.jpg);
 .flipThis {
     transform: rotateY(180deg);
 }
-
-
 
 .invisible {
     display: none;
@@ -147,17 +149,47 @@ border: 1px solid white;
 border-radius: 5px;
 
 }
-
+/* up-down arrows (not displaying on mobile - to fix):*/
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
-
    -webkit-appearance: "Always Show Up/Down Arrows";
    opacity: 1;
+   -webkit-appearance: textfield;
+   -moz-appearance: textfield;
+   appearance: textfield;
+   line-height: 1;
 }
 
 
+/*for responsive font size:*/
+@media (min-width: 17.5em) {
+    .instructions {
+        font-size: calc(0.875rem + ((1vw - 0.175rem) * 0.2439));
+      min-height: 0vw;
+    }
+    h1 {
+        font-size: calc(1.25rem + ((1vw - 0.175rem) * 0.9146));
+        min-height: 0vw;
+      }
+      h2 {
+        font-size: calc(0.625rem + ((1vw - 0.175rem) * 0.4268));
+        min-height: 0vw;
+      }
+  }
+  @media (min-width: 120em) {
+    .instructions {
+      font-size: 1.125rem;
+    }
+    h1 {
+        font-size: 2.1rem;
+      }
+      h2 {
+        font-size: 1.0625rem;
+      }
+  }
 
-@media screen and (max-width: 1253px) {
-    
-
-}
+  @media (max-width: 470px) {
+    .subtitle div {
+      display: none;
+    }
+  }
