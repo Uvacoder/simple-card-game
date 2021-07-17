@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+
+body {
+    background-image: url(img/webb-dark.png);
+    background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(219, 208, 183);
+    font-size: 1.9vmax;
+    line-height: 1.3;
+    padding: 6px 0px 0px 3px;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    margin: 2px auto;
+    font-weight: normal;
+    
+    
+}
+
+h2 {
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(219, 208, 183);
+    font-size: 1vmax;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    padding-bottom: 2px;
+    font-weight: normal;
+    
+}
+
+.instructions {
+    font-size: 17px;
+    line-height: 1.2;
+    color: white;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    flex-flow: row wrap;
+    justify-content: center;/*refers to main axis*/
+    padding-top: 20px;
+    margin: auto;
+  
+}
+
+
+div.container>* {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    
+    cursor: pointer;
+}
+
+
+.faceDown, .faceUp, .hidden {
+background-size: contain;
+width: 100%;
+height: 100%;
+position: absolute; 
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  outline: 1.5px solid rgb(27, 25, 22);
+    outline-offset: -1.5px;
+
+
+}
+
+.faceDown {
+background-image: url(img/backside.jpg);
+
+
+
+}
+
+.faceUp {
+    
+
+}
+
+.hidden {
+    visibility:hidden;
+    
+
+
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 175px;
+  height: 227.69px;
+  display: inline-block;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+
+}
+
+.flipThis {
+    transform: rotateY(180deg);
+}
+
+
+
+.invisible {
+    display: none;
+}
+
+.gameOver {
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(111, 161, 226);
+    font-size: 2vmax;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+
+.button {
+    font-size: 18px;
+    line-height: 1.2;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    background-color:transparent;
+    border: 2px solid rgb(219, 208, 183);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input[type=number] { 
+background-color: transparent;
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   -webkit-appearance: "Always Show Up/Down Arrows";
+   opacity: 1;
+}
+
+
+
+@media screen and (max-width: 1253px) {
+    
+
+}
