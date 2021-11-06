@@ -19,9 +19,9 @@ const container = document.getElementById("container");
 
 /*creating a new game*/
 window.onload = function () {
-
+// default initiation with 12 cards:
     initiateGame();
-
+//initiation by user input:
     numOfCards.oninput = function () {
         initiateGame();
     };
@@ -49,6 +49,7 @@ function createCard() {
 function shuffleArray() {
 
     for (var i = imageArrayDouble.length - 1; i > 0; i--) {
+        //get a random integer:
         var j = Math.floor(Math.random() * (i + 1));
         var temp = imageArrayDouble[i];
         imageArrayDouble[i] = imageArrayDouble[j];
@@ -80,13 +81,12 @@ function initiateGame() {
 
     //event listener - when clicking on a card set background-image style to cardArray        
     cardArray = Array.from(document.getElementsByClassName("faceDown"));
-    console.log(cardArray);
+    //console.log(cardArray);
     for (var n = 0; n < cardArray.length; n++) {
 
         cardArray[n].addEventListener("click", function () {
 
             if (this.className == "faceDown") {
-                //this.classList.add("flipThis");
 
                 this.className = "faceUp";
                 this.style.backgroundImage = "url(" + imageArrayDouble[cardArray.indexOf(this)] + ")";
@@ -119,7 +119,6 @@ function initiateGame() {
                 }, 1200);
 
             }
-
             else if (numOfFlipped > 1 && pair[0].style.backgroundImage != pair[1].style.backgroundImage) {
                 setTimeout(function () {
 
@@ -160,10 +159,10 @@ function endCount() {
 
 
 function checkIfFinished() {
-    console.log(document.getElementsByClassName("hidden").length);
+    //console.log(document.getElementsByClassName("hidden").length);
     if (document.getElementsByClassName("hidden").length >= chosenNumOfCards) {
         var instructions = Array.from(document.getElementsByClassName("instructions"));
-        console.log(instructions);
+        //console.log(instructions);
         instructions[0].className = "invisible";
         instructions[1].className = "invisible";
 
