@@ -15,8 +15,6 @@ var imageArrayDouble;
 var cardArray;
 const container = document.getElementById("container");
 
-
-
 /*creating a new game*/
 window.onload = function () {
 
@@ -25,10 +23,7 @@ window.onload = function () {
     numOfCards.oninput = function () {
         initiateGame();
     };
-
 }
-
-
 
 /*creating card element*/
 function createCard() {
@@ -56,9 +51,7 @@ function shuffleArray() {
     }
 }
 
-
 function initiateGame() {
-
     container.innerHTML = '';
     numOfCards = document.getElementById("numOfCards");
     chosenNumOfCards = numOfCards.value;
@@ -80,32 +73,19 @@ function initiateGame() {
 
     //event listener - when clicking on a card set background-image style to cardArray        
     cardArray = Array.from(document.getElementsByClassName("faceDown"));
-    console.log(cardArray);
     for (var n = 0; n < cardArray.length; n++) {
 
         cardArray[n].addEventListener("click", function () {
 
             if (this.className == "faceDown") {
-                //this.classList.add("flipThis");
-
                 this.className = "faceUp";
                 this.style.backgroundImage = "url(" + imageArrayDouble[cardArray.indexOf(this)] + ")";
                 this.style.transform = "rotateY(180deg)";
                 this.parentElement.style.transform = "rotateY(180deg)";
             }
-
             else {
-                /* if (this.parentElement.style.transform = "rotateY(180deg)") {
-                     this.parentElement.style.transform = "rotateY(0deg)";
-                 }
-                 else {
-                     this.parentElement.style.transform = "rotateY(180deg)"; 
-                 }
-                 this.style.transform = "rotateY(180deg)";*/
                 this.className = "faceDown";
                 this.style.backgroundImage = "url(img/backside.jpg)";
-
-
             }
 
             var numOfFlipped = document.getElementsByClassName("faceUp").length;
@@ -117,12 +97,10 @@ function initiateGame() {
                     pair[1].className = "hidden";
                     checkIfFinished();
                 }, 1200);
-
             }
 
             else if (numOfFlipped > 1 && pair[0].style.backgroundImage != pair[1].style.backgroundImage) {
                 setTimeout(function () {
-
                     pair[0].className = "faceDown";
                     pair[0].style.backgroundImage = "url(img/backside.jpg)";
                     pair[0].parentElement.style.transform = "rotateY(0deg)";
@@ -133,11 +111,8 @@ function initiateGame() {
                     pair[1].style.transform = "rotateY(0deg)";
                     pair[1].parentElement.style.transform = "rotateY(0deg)";
                 }, 1200);
-
             }
-
         });
-
     }
 }
 
@@ -150,20 +125,14 @@ function startCount() {
 function endCount() {
     endTime = new Date();
     var timeDiff = endTime - startTime; //in ms
-    // strip the ms
     timeDiff /= 1000;
-    // get seconds 
     var seconds = Math.round(timeDiff);
     timeElapsed.innerText = "Your game duration was " + seconds + " seconds";
   }
 
-
-
 function checkIfFinished() {
-    console.log(document.getElementsByClassName("hidden").length);
     if (document.getElementsByClassName("hidden").length >= chosenNumOfCards) {
         var instructions = Array.from(document.getElementsByClassName("instructions"));
-        console.log(instructions);
         instructions[0].className = "invisible";
         instructions[1].className = "invisible";
 
@@ -180,29 +149,6 @@ function checkIfFinished() {
     }
 }
 
-
-
-
-/*animation for flipping cards
-
-var flipCardInner;
-flipCardInner = Array.from(document.getElementsByClassName("flip-card-inner"));
-console.log(flipCardInner);
-for (var k = 0; k < flipCardInner.length; k++) {
-    flipCardInner[k].addEventListener("click", function () {
-        if (this.className == "flip-card-inner") {
-            if (this.style.transform = "rotateY(180deg)") {
-                this.style.transform = "rotateY(0deg)";
-            }
-            else {
-                this.style.transform = "rotateY(180deg)";
-            }
-        }
-    }
-
-    )
-};
-*/
 
 
 
