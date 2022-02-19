@@ -123,6 +123,10 @@ div.container>* {
   font-size: 2vmax;
   font-stretch: extra-condensed;
   transform: scaleY(1.5);
+  -webkit-transform: scaleY(1.5);
+  -moz-transform: scaleY(1.5);
+  -ms-transform: scaleY(1.5);
+  -o-transform: scaleY(1.5);
   padding-top: 50px;
   padding-bottom: 15px;
   font-weight: normal;
