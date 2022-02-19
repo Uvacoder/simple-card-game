@@ -8,27 +8,27 @@ body {
 }
 
 h1 {
-  font-family: 'Diplomata SC', cursive, sans-serif;
-  color: rgb(219, 208, 183);
-  line-height: 1.1;
-  padding: 6px 0px 0px 3px;
-  font-stretch: extra-condensed;
-  transform: scaleY(1.5);
-  -webkit-transform: scaleY(1.5);
-  -moz-transform: scaleY(1.5);
-  -ms-transform: scaleY(1.5);
-  -o-transform: scaleY(1.5);
-  margin: 2px auto;
-  font-weight: normal;
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(219, 208, 183);
+    line-height: 1.1;
+    padding: 6px 0px 0px 3px;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+    margin: 2px auto;
+    font-weight: normal;
 }
 
 h2 {
-  font-family: 'Diplomata SC', cursive, sans-serif;
-  color: rgb(219, 208, 183);
-  font-stretch: extra-condensed;
-  transform: scaleY(1.5);
-  padding-bottom: 2px;
-  font-weight: normal;
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(219, 208, 183);
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    padding-bottom: 2px;
+    font-weight: normal;
 }
 
 .subtitle {
@@ -73,15 +73,15 @@ div.container>* {
 }
 
 .faceDown, .faceUp, .hidden {
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+   position: absolute; 
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  backface-visibility: hidden;
   outline: 1.5px solid rgb(27, 25, 22);
   outline-offset: -1.5px;
 }
@@ -118,18 +118,18 @@ div.container>* {
 }
 
 .gameOver {
-  font-family: 'Diplomata SC', cursive, sans-serif;
-  color: rgb(111, 161, 226);
-  font-size: 2vmax;
-  font-stretch: extra-condensed;
-  transform: scaleY(1.5);
-  -webkit-transform: scaleY(1.5);
-  -moz-transform: scaleY(1.5);
-  -ms-transform: scaleY(1.5);
-  -o-transform: scaleY(1.5);
-  padding-top: 50px;
-  padding-bottom: 15px;
-  font-weight: normal;
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(111, 161, 226);
+    font-size: 2vmax;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-weight: normal;
 }
 
 .button {
